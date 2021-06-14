@@ -83,7 +83,7 @@ h.frommx <- function(mx,sex){
   Tx 				    <- c(rev(cumsum(rev(Lx[1:OPENAGE]))),0) + Lx[i.openage]
   ex 				    <- Tx / lx
   l <- length(ex)
-  v <- (sum(dx[-l]* (ex[-l] + ax[-l]*(ex[-1]-ex[-l]) )) + ex[l])
+  v <- (sum(dx[-l]* (ex[-l] + ax[-l]*(ex[-1]-ex[-l]) )) + dx[l]*ex[l])
   k <- v/ex[1]
   eq <- -log(k)
   return(eq)
